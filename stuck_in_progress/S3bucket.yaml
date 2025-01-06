@@ -1,0 +1,12 @@
+Parameters:
+  S3BucketName:
+    Type: String
+    Default: cfn-training-bucket-failed
+    Description: "S3 bucket to create"
+
+Resources:
+  SampleS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref S3BucketName
+    DeletionPolicy: Delete
